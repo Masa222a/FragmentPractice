@@ -18,7 +18,10 @@ class SecondFragment : Fragment() {
         binding = FragmentSecondBinding.inflate(inflater, container, false)
 
         binding.backButton.setOnClickListener {
-            parentFragmentManager.popBackStack()
+            parentFragmentManager.beginTransaction().apply {
+                replace(R.id.container, MainFragment())
+                commit()
+            }
         }
 
         return binding.root

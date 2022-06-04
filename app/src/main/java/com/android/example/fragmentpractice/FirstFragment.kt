@@ -19,7 +19,7 @@ class FirstFragment : Fragment() {
         binding.secondButton.setOnClickListener {
             parentFragmentManager.beginTransaction().apply {
                 replace(R.id.container, SecondFragment())
-                addToBackStack("Main")
+                addToBackStack(null)
                 commit()
             }
         }

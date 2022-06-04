@@ -1,7 +1,7 @@
 package com.android.example.fragmentpractice
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.android.example.fragmentpractice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,5 +17,9 @@ class MainActivity : AppCompatActivity() {
             replace(R.id.container, MainFragment())
             commit()
         }
+    }
+
+    override fun onBackPressed() {
+        moveTaskToBack(true)
     }
 }
